@@ -1,0 +1,51 @@
+{% extends 'admin.html' %}
+
+{% block style%}
+<div class="sidebar-wrapper">
+  <ul class="nav">
+    <li class="active ">
+      <a href="/admin">
+        <i class="nc-icon nc-single-02"></i>
+        <p>Панель управления/p>
+      </a>
+    </li>
+    <li>
+      <a href="/hostels">
+        <i class="nc-icon nc-bank"></i>
+        <p>Объекты</p>
+      </a>
+    </li>
+  </ul>
+</div>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+<form action = '/add-hostel' method='POST' style="padding-left: 4em;padding-right: 4em;padding-bottom: 4em;padding-top: 0em;">
+    <center><h4>Добавить новый объект</h4></center>
+    <hr>
+    <div class="form-group"></div>
+    <label for="hname">Название объекта:</label>
+    <input class="form-control" type="text" name="hname" id="hname">
+    <br>
+    <label for="warden">Имя владельца:</label>
+    <input class="form-control" type="text" name="warden" id="warden" rows=4>
+    <br>
+    <label for="nrooms">Количество максимальных посетителей:</label>
+    <input class="form-control" type="text" name="nrooms" id="nrooms">
+    <br>
+    <label for="nstudents">Владельцев абониментов:</label>
+    <input class="form-control" type="text" name="nstudents" id="nstudents">
+    <br>
+    <label for="fee">Цена за абонимент:</label>
+    <input class="form-control" type="text" name="fee" id="fee">
+    <br>
+    <label for="messfee">Цена за аренду:</label>
+    <input class="form-control" type="text" name="messfee" id="messfee">
+    <br>
+    <input type="submit" value="Add Hostel" class="btn btn-primary">
+    </div>
+</form>
+<hr>
+</div>
+{% endblock %}
