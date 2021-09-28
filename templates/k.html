@@ -9,7 +9,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EventPedia</title>
+  <title>ObjectInfo</title>
   <!-- PLUGINS CSS STYLE -->
   <!-- Font Awesome -->
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -71,38 +71,32 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
             <div class="col-lg-3 col-md-6 mt-0 mt-md-5">
-                 
-                    
-                        
-                
-                <!-- <img class="" style="margin-top: -5em" src="assets/img/services-3.jpg" alt="Card image cap"> -->
+              <!-- <img src="assets/img/object-{{info.id}}.jpg" alt="..."> -->
             </div>
           <div class="col-lg-1 col"></div>
           <div class="col-lg-4 col-md-6 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">HOSTEL {{info.hname}}  <br><span>  </span></h1>
-            <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="icon-calendar mr-2"></span> Thapar University,Patiala </p>
+            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Объект: {{info.hname}}  <br><span>  </span></h1>
+            <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{{info.fee}}<span class="icon-calendar mr-2"></span></p>
             <div id="timer" class="d-flex">
             </div>
         </div>
         <div class="col-lg-4 col-md-6 mt-0 mt-md-5">
                 <form action="#" class="request-form ftco-animate">
-                        <h2>Join Hostel</h2>
+                        <h2>Связь с администрацией объекта</h2>
                               <div class="form-group">
-                                  <input type="text" class="form-control" placeholder="Enter your Name">
+                                  <input type="text" class="form-control" placeholder="Ваше имя">
                               </div>
                               <div class="form-group">
-                                  <input type="text" class="form-control" placeholder="Enter your Email">
+                                  <input type="text" class="form-control" placeholder="Ваш E-mail">
                               </div>
                               <div class="form-group">
-                                  <input type="text" class="form-control" placeholder="Enter your Phone">
+                                  <input type="text" class="form-control" placeholder="Ваш номер телефона">
                               </div>
                               <div class="form-group">
-                                      <div class="checkbox">
-                                         <label><input type="checkbox" value="" class="mr-2"> I have read and accept the terms and conditions</label>
-                                      </div>
+                                      
                                   </div>
                       <div class="form-group">
-                        <input type="submit" value="Join now" class="btn btn-primary py-3 px-4">
+                        <input type="submit" value="Отправить" class="btn btn-primary py-3 px-4">
                       </div>
                           </form>
         </div>
@@ -116,8 +110,8 @@
           <div class="col-md-3 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block" >
                 <i class="" aria-hidden="true" style="font-size: 5em;color : white;margin-top: 20px;margin-left: 5px" ></i>
-              <div class="media-body"><h3  style="color : white" class="heading mb-3">Warden</h3>
-                <p style="color : white;font-size : 1em ">{{info.warden}}  </p>
+              <div class="media-body"><h3  style="color : white" class="heading mb-3">Владелец</h3>
+                <p style="color : white;font-size : 1.5em ">{{info.warden}}  </p>
                 <!-- <p style="color : white;font-size : 1em "> Duration : </p> -->
               </div>
             </div>      
@@ -126,8 +120,8 @@
                 <div class="media block-6 services d-block">
                 <i class="" aria-hidden="true" style="font-size: 5em;color : white;margin-top: 20px;margin-left: 5px"></i>
                   <div class="media-body">
-                   <h3  style="color : white" class="heading mb-3">Rooms</h3>
-                    <p style="color : white;font-size : 1em "> NO. Of Rooms -{{info.nrooms}}  </p>
+                   <h3  style="color : white" class="heading mb-3">Количество посетителей</h3>
+                    <p style="color : white;font-size : 1.5em">{{info.nrooms}}  </p>
                     <!-- <p style="color : white;font-size : 1em "> NoN AC Rooms -100  </p> -->
                   </div>
                 </div>      
@@ -136,9 +130,8 @@
             <div class="media block-6 services d-block">
             <i class="" aria-hidden="true" style="font-size: 5em;color : white;margin-top: 20px;margin-left: 5px"></i>
               <div class="media-body">
-                <h3  style="color : white" class="heading mb-3">Fees</h3>
-                <p style="color : white;font-size : 1em "> Hostel Fees - {{info.fee}} </p>
-                <p style="color : white;font-size : 1em "> Mess Fees - {{info.messfee}} </p>
+                <h3  style="color : white" class="heading mb-3">Цена аренды</h3>
+                <p style="color : white;font-size : 1.5em ">{{info.messfee}} </p>
               </div>
             </div>    
           </div>
@@ -146,8 +139,8 @@
             <div class="media block-6 services d-block">
             <i class="" aria-hidden="true" style="font-size: 5em;color : white;margin-top: 20px;margin-left: 5px"></i>
               <div class="media-body">
-                <h3  style="color : white" class="heading mb-3">Students</h3>
-                <p style="color : white;font-size : 1em ">Number Of Students -{{info.nstudents}}</p>
+                <h3  style="color : white" class="heading mb-3">Возраст объекта</h3>
+                <p style="color : white;font-size : 1.5em">{{info.nstudents}}</p>
                 <!-- <p style="color : white;font-size : 1em "> Max Strength - 2000 </p> -->
               </div>
             </div>  

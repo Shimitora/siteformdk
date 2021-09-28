@@ -26,7 +26,7 @@ class Hostel(db.Model):
     warden = db.Column(db.String(30), nullable=False)
     nrooms = db.Column(db.Integer, nullable=False)
     nstudents = db.Column(db.Integer, nullable=False)
-    fee = db.Column(db.Integer, nullable=False)
+    fee = db.Column(db.String(60), nullable=False)
     messfee = db.Column(db.Integer, nullable=False)
 
     def __repr__(self):
@@ -90,7 +90,7 @@ def addhostel():
         return render_template('addhostel.html')
 
 
-@app.route('/hostels/edit/<int:id>', methods=['GET', 'POST'])
+@app.route('/hostel/edit/<int:id>', methods=['GET', 'POST'])
 def update(id):
     info = Hostel.query.get_or_404(id)
     if request.method == 'POST':

@@ -6,13 +6,13 @@
     <li>
       <a href="/admin">
         <i class="nc-icon nc-single-02"></i>
-        <p>Dashboard</p>
+        <p>Панель управления</p>
       </a>
     </li>
     <li class="active ">
       <a href="/hostels">
         <i class="nc-icon nc-bank"></i>
-        <p>Hostel Details</p>
+        <p>Описание объектов</p>
       </a>
     </li>
   </ul>
@@ -24,14 +24,14 @@
 {% block body %}
 <br><br><br>
 <div style="padding: 4em;">
-    <h2 style="font-weight:500">List of Hostels</h2>
+    <h2 style="font-weight:500">Список объектов</h2>
     <hr>
     <table class="table">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">Hostel Name</th>
-            <th scope="col">Warden</th>
-            <th scope="col">Actions</th>
+            <th scope="col">Название</th>
+            <th scope="col">Владелец</th>
+            <th scope="col">Действия</th>
           </tr>
         </thead>
         <tbody>
@@ -39,7 +39,7 @@
             <tr>
             <td>{{hostel.hname}}</td>
             <td>{{hostel.warden}}</td>
-            <td><a  href="/hostels/edit/{{hostel.id}}" class="btn btn-primary btn-small">Edit <i class="fa fa-pencil" aria-hidden="true"></i></a> <a href="/hostels/delete/{{hostel.id}}" class="btn btn-danger btn-small">Delete <i class="fa fa-times" aria-hidden="true"></i></a></td>
+            <td><a  href="/hostels/edit/{{hostel.id}}" class="btn btn-primary btn-small">Редактировать <i class="fa fa-pencil" aria-hidden="true"></i></a> <a href="/hostels/delete/{{hostel.id}}" class="btn btn-danger btn-small">Удалить <i class="fa fa-times" aria-hidden="true"></i></a></td>
             </tr>
         {% endfor %}
         </tbody>
