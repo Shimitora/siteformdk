@@ -27,7 +27,7 @@ class Hostel(db.Model):
     nrooms = db.Column(db.Integer, nullable=False)
     nstudents = db.Column(db.Integer, nullable=False)
     fee = db.Column(db.String(60), nullable=False)
-    messfee = db.Column(db.Integer, nullable=False)
+    messfee = db.Column(db.String(500), nullable=False)
 
     def __repr__(self):
         return 'Hostel' + str(self.id)
